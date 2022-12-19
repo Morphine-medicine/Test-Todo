@@ -1,0 +1,18 @@
+
+<div class="container">
+  <span class="material-symbols-outlined back" (click)="navigateToList()">
+  arrow_back
+  </span>
+
+  <label for="label">Todo item label</label>
+  <input class="input" id="label" type="text" [(ngModel)]="item.label" />
+
+  <label for="descr">Todo item label</label>
+  <input class="input" id="descr" type="text" [(ngModel)]="item.description" />
+
+  <label for="category">Todo item category</label>
+  <input class="input" id="category" type="text" [(ngModel)]="item.category" />
+  <br/>
+  <button [disabled]="isSubmitDisabled" (click)="submitItem()">Submit</button>
+
+</div>

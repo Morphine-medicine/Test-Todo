@@ -1,0 +1,18 @@
+<div class="todo-list">
+  <div>
+    <input type="search" class="form-control" id="search-text" aria-describedby="search-text"
+           [(ngModel)]="filterValue" placeholder="Enter text to find your todo Item"
+           autofocus>
+  </div>
+  <div class="add-button-container">
+    Add new todo item
+    <span class="material-symbols-outlined add-button" (click)="onAddButtonClick()">
+    add
+    </span>
+  </div>
+  <div class="items">
+    <li *ngFor="let todoItem of apiCaller.todoList$ | async | todoFilter : filterValue">
+      <app-todo-item [item] = "todoItem"></app-todo-item>
+    </li>
+  </div>
+</div>

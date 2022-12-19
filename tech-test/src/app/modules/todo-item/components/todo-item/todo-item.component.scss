@@ -1,0 +1,15 @@
+.todo-item{
+  display: flex;
+  gap: 20px;
+}
+.done{
+  cursor: pointer;
+}
+.delete{
+  cursor: pointer;
+}
+
+.todo-label{
+
+  cursor: pointer;
+}

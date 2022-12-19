@@ -1,0 +1,18 @@
+<div class="todo-item">
+  <div class="done" (click)="toggleItemDone()">
+    <span class="material-symbols-outlined" *ngIf="!item?.done else cross">
+    check_circle
+    </span>
+  </div>
+  <div (click)="navigateToEdit()" class="todo-label">{{item?.label}}</div>
+  <span class="material-symbols-outlined delete" (click)="deleteItem()">
+  delete
+  </span>
+</div>
+
+
+<ng-template #cross>
+    <span class="material-symbols-outlined">
+  cancel
+  </span>
+</ng-template>
